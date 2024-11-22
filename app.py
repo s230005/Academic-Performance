@@ -17,9 +17,9 @@ st.write(' - 인공지능 모델 정확도 : 0.12')
 # 3. 데이터시각화
 with col1:
       st.subheader('데이터시각화1')
-      st.image('시각화2 (1).png' )
+      st.image('시각화2.png' )
 with col2:
       st.subheader('데이터시각화2')
-      st.image('시각화3 (1).png' )
+      st.image('시각화3.png' )
 
 # 4. 모델 활용
