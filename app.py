@@ -24,3 +24,14 @@ with col2:
       st.image('시각화3.png' )
 
 # 4. 모델 활용
+st.subheader('모델 활용')
+st.write('**** 다음을 입력하세요')
+a = st.number_input(' 지난 일주일간 평균 수면의 질을 1~5 사이의 값으로 평가한다면 몇입니까? ', value=0)      #초기값은 0
+b = st.number_input(' 지난 일주일간 평균 두통 횟수를 입력하세요. ', value=0)     # 초기값은 0.0
+c = st.number_input(' 당신의 공부량을 1~5 사이의 값으로 평가한다면 몇입니까? ', value=0)
+d = st.number_input(' 일주일에 몇번정도 학교외에 추가적인 활동을 하시나요? ex.운동, 학원 ', value=0)
+e = st.number_input(' 당신의 스트레스 지수를 1~5사이의 값으로 평가한다면 몇입니까? ', value=0)
+if st.button('학업성취도 예측'):            # 사용자가 '점수예측' 버튼을 누르면
+        input_data = [[a,b,c,d,e]]     # 사용자가 입력한 a,b,c 를 input_data에 저장하고
+        p = model.predict(input_data)         # model이 예측한 값을 p에 저장한다
+        st.write('인공지능의 예측 학업성취도는', p)
