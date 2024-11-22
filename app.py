@@ -25,7 +25,7 @@ with col2:
 
 # 4. 모델 활용
 st.subheader('모델 활용')
-st.write('**** 다음을 입력하세요')
+st.write('**** 다음을 입력하세요 **** 인공지능이 당신의 학업성취도를 1~5사이의 값으로 예측해드립니다!')
 a = st.number_input(' 지난 일주일간 평균 수면의 질을 1~5 사이의 값으로 평가한다면 몇입니까? ', value=0)      #초기값은 0
 b = st.number_input(' 지난 일주일간 평균 두통 횟수를 입력하세요. ', value=0)     # 초기값은 0.0
 c = st.number_input(' 당신의 공부량을 1~5 사이의 값으로 평가한다면 몇입니까? ', value=0)
@@ -35,3 +35,4 @@ if st.button('학업성취도 예측'):            # 사용자가 '점수예측'
         input_data = [[a,b,c,d,e]]     # 사용자가 입력한 a,b,c 를 input_data에 저장하고
         p = model.predict(input_data)         # model이 예측한 값을 p에 저장한다
         st.write('인공지능의 예측 학업성취도는', p)
+st.write('당신의 정보는 오로지 점수 예측에만 사용되며, 암호화되어 서버에 저장됩니다.'
