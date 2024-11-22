@@ -35,4 +35,4 @@ if st.button('학업성취도 예측'):            # 사용자가 '점수예측'
         input_data = [[a,b,c,d,e]]     # 사용자가 입력한 a,b,c 를 input_data에 저장하고
         p = model.predict(input_data)         # model이 예측한 값을 p에 저장한다
         st.write('인공지능의 예측 학업성취도는', p)
-st.write('당신의 정보는 오로지 점수 예측에만 사용되며, 암호화되어 서버에 저장됩니다.'
+st.write('당신의 정보는 오로지 점수 예측에만 사용되며, 암호화되어 서버에 저장됩니다.')
